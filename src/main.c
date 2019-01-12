@@ -118,14 +118,14 @@ void AgbMain()
     {
         ReadKeys();
 
-        if (gSoftResetDisabled == FALSE
-         && (gMain.heldKeysRaw & A_BUTTON)
-         && (gMain.heldKeysRaw & B_START_SELECT) == B_START_SELECT)
-        {
-            rfu_REQ_stopMode();
-            rfu_waitREQComplete();
-            DoSoftReset();
-        }
+        // if (gSoftResetDisabled == FALSE
+        //  && (gMain.heldKeysRaw & A_BUTTON)
+        //  && (gMain.heldKeysRaw & B_START_SELECT) == B_START_SELECT)
+        // {
+        //     rfu_REQ_stopMode();
+        //     rfu_waitREQComplete();
+        //     DoSoftReset();
+        // }
 
         if (sub_8087634() == 1)
         {
