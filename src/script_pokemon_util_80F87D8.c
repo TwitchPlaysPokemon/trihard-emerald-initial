@@ -23,6 +23,7 @@
 #include "script.h"
 #include "script_menu.h"
 #include "sprite.h"
+#include "start_menu.h"
 #include "string_util.h"
 #include "tv.h"
 #include "constants/event_objects.h"
@@ -541,6 +542,8 @@ void HealPlayerParty(void)
         arg[3] = 0;
         SetMonData(&gPlayerParty[i], MON_DATA_STATUS, arg);
     }
+
+    ForceSave();
 }
 
 u8 ScriptGiveMon(u16 species, u8 level, u16 item, u32 unused1, u32 unused2, u8 unused3)
