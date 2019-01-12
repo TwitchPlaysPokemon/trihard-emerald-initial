@@ -92,6 +92,7 @@ extern const u16 gUnknown_82EC7C4[];
 
 // functions
 extern void HealPlayerParty(void);
+extern void CB2_FadeAndDoReset(void);
 extern void move_tilemap_camera_to_upper_left_corner(void);
 extern void cur_mapheader_run_tileset_funcs_after_some_cpuset(void);
 extern void DrawWholeMapView(void);
@@ -424,12 +425,13 @@ static void (*const gUnknown_08339E00[])(struct LinkPlayerEventObject *, struct 
 // code
 void DoWhiteOut(void)
 {
-    ScriptContext2_RunNewScript(EventScript_WhiteOut);
-    SetMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) / 2);
-    HealPlayerParty();
-    Overworld_ResetStateAfterWhiteOut();
-    SetWarpDestinationToLastHealLocation();
-    WarpIntoMap();
+    DoSoftReset();
+    // ScriptContext2_RunNewScript(EventScript_WhiteOut);
+    // SetMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) / 2);
+    // HealPlayerParty();
+    // Overworld_ResetStateAfterWhiteOut();
+    // SetWarpDestinationToLastHealLocation();
+    // WarpIntoMap();
 }
 
 void Overworld_ResetStateAfterFly(void)
