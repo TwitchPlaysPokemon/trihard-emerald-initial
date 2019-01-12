@@ -1,5 +1,6 @@
 #include "global.h"
 #include "main.h"
+#include "overworld.h"
 #include "palette.h"
 #include "scanline_effect.h"
 #include "task.h"
@@ -1013,6 +1014,8 @@ void CB2_InitCopyrightScreenAfterBootup(void)
             Sav2_ClearSetDefault();
         SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
         InitHeap(gHeap, HEAP_SIZE);
+        if (gSaveFileStatus == 1)
+            CB2_ContinueSavedGame();
     }
 }
 

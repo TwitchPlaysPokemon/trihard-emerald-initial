@@ -499,6 +499,14 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
 {
     s16* data = gTasks[taskId].data;
 
+    if (gSaveFileStatus == 1) { //has save
+        gPlttBufferUnfaded[0] = RGB_BLACK;
+        gPlttBufferFaded[0] = RGB_BLACK;
+        SetMainCallback2(CB2_ContinueSavedGame); //resume save right away
+        DestroyTask(taskId);
+        return;
+    }
+
     if (!gPaletteFade.active)
     {
         SetGpuReg(REG_OFFSET_WIN0H, 0);
