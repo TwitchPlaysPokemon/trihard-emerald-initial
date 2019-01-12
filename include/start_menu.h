@@ -8,6 +8,7 @@ void sub_809FA34(u8 taskId);
 void ShowStartMenu(void);
 void sub_809FDD4(void);
 void SaveGame(void);
+void ForceSave(void);
 void sub_80A0514(void);
 void sub_80A08CC(void);
 void HideStartMenu(void);

@@ -301,7 +301,7 @@ static void BuildNormalStartMenu(void)
     }
 
     AddStartMenuAction(MENU_ACTION_PLAYER);
-    AddStartMenuAction(MENU_ACTION_SAVE);
+    //AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -883,6 +883,13 @@ static u8 RunSaveCallback(void)
 void SaveGame(void) // Called from cable_club.s
 {
     InitSave();
+    CreateTask(SaveGameTask, 0x50);
+}
+
+void ForceSave(void) // Called from HealPlayerParty
+{
+    InitSave();
+    sSaveDialogCallback = SaveSavingMessageCallback;
     CreateTask(SaveGameTask, 0x50);
 }
 
