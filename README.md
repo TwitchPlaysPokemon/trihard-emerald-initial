@@ -19,5 +19,4 @@ Other possible suggestions:
 
 If you feel these rules should be adjusted, add an Issue.
 
-Based on the Pret disassembly of [**Pokémon Emerald**][pokeemerald]
-[[pokeemerald]: https://github.com/pret/pokeemerald
+Based on the Pret disassembly of [**Pokémon Emerald**](https://github.com/pret/pokeemerald)
