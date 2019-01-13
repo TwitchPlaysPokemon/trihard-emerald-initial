@@ -1,38 +1,23 @@
-# Pokémon Emerald
+# Pokémon TriHard Emerald
 
-[![Build Status][travis-badge]][travis]
+Currently, the idea is that this is a modified version of Emerald that conforms to the following "TriHard" rules:
 
-This is a disassembly of Pokémon Emerald.
+1. Save option is removed from menu.
+2. Pokémon Storage System is inaccessible.
+3. Cannot catch Pokémon when party is full
+4. Healing at a Pokémon Center (or Mom's/Grandma's house) saves the game
+5. When a Pokémon faints, it is immediately moved from the party into the PC (overwriting the oldest Pokémon if the PC is full)
+6. When the player whites out, the game resets.
+7. When a save file exists, the game loads it immediately upon starting
 
-It builds the following rom:
+(Nuzlocke catching requirements are ignored entirely)
 
-* pokeemerald.gba `sha1: f3ae088181bf583e55daf962a92bb46f4f1d07b7`
+Other possible suggestions:
 
-To set up the repository, see [INSTALL.md](INSTALL.md).
+* Give the player infinite Poké balls to prevent winding up stuck with a single underleveled or pacifist Pokémon
+* Boost exp earned and/or give exp to the entire party whether they participated or not to reduce the tedium of grinding.
 
+If you feel these rules should be adjusted, add an Issue.
 
-## See also
-
-* Disassembly of [**Pokémon Red/Blue**][pokered]
-* Disassembly of [**Pokémon Yellow**][pokeyellow]
-* Disassembly of [**Pokémon Gold**][pokegold]
-* Disassembly of [**Pokémon Crystal**][pokecrystal]
-* Disassembly of [**Pokémon Pinball**][pokepinball]
-* Disassembly of [**Pokémon TCG**][poketcg]
-* Disassembly of [**Pokémon Ruby**][pokeruby]
-* Disassembly of [**Pokémon Fire Red**][pokefirered]
-* Discord: [**pret**][Discord]
-* irc: **irc.freenode.net** [**#pret**][irc]
-
-[pokered]: https://github.com/pret/pokered
-[pokeyellow]: https://github.com/pret/pokeyellow
-[pokegold]: https://github.com/pret/pokegold
-[pokecrystal]: https://github.com/pret/pokecrystal
-[pokepinball]: https://github.com/pret/pokepinball
-[poketcg]: https://github.com/pret/poketcg
-[pokeruby]: https://github.com/pret/pokeruby
-[pokefirered]: https://github.com/pret/pokefirered
-[Discord]: https://discord.gg/6EuWgX9
-[irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret
-[travis]: https://travis-ci.org/pret/pokeemerald
-[travis-badge]: https://travis-ci.org/pret/pokeemerald.svg?branch=master
+Based on the Pret disassembly of [**Pokémon Emerald**][pokeemerald]
+[[pokeemerald]: https://github.com/pret/pokeemerald
