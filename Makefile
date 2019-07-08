@@ -44,7 +44,6 @@ LDFLAGS = -Map ../../$(MAP)
 
 LIB := -L ../../tools/agbcc/lib -lgcc -lc
 
-SHA1 := $(shell { command -v sha1sum || command -v shasum; } 2>/dev/null) -c
 GFX := tools/gbagfx/gbagfx$(EXE)
 AIF := tools/aif2pcm/aif2pcm$(EXE)
 MID := tools/mid2agb/mid2agb$(EXE)
@@ -88,10 +87,6 @@ SUBDIRS  := $(sort $(dir $(OBJS)))
 $(shell mkdir -p $(SUBDIRS))
 
 rom: $(ROM)
-
-# For contributors to make sure a change didn't affect the contents of the ROM.
-compare: $(ROM)
-	@$(SHA1) rom.sha1
 
 clean: tidy
 	rm -f sound/direct_sound_samples/*.bin
